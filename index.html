@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <title>Aku Sayang Kamu</title>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/diki.css">
+  <link rel="stylesheet" href="assets/plugin/font-awesome/css/font-awesome.min.css">
+</head>
+<body class="bg-pink-200 bg-hati text-dark">
+
+  <style type="text/css">
+    .title .typed-cursor{
+      font-size: 3.8vw !important;
+    }
+
+    .depan{
+      /*min-height: 550px;*/
+      min-height: calc(100vh - 170px);
+    }
+
+
+    .fa-beat {
+      animation:fa-beat 2s ease infinite;
+    }
+
+    @keyframes fa-beat {
+      0% {
+        transform:scale(1);
+      }
+      5% {
+        transform:scale(1.75);
+      }
+      20% {
+        transform:scale(1);
+      }
+      30% {
+        transform:scale(1);
+      }
+      35% {
+        transform:scale(1.75);
+      }
+      50% {
+        transform:scale(1);
+      }
+      55% {
+        transform:scale(1.75);
+      }
+      70% {
+        transform:scale(1);
+      }
+    }
+
+    .hati {
+      color:red;
+    }
+
+
+
+
+
+    .bg-hati {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden
+    }
+
+    .butir {
+      position: absolute;
+      top: -50%;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -m-transform: rotate(-45deg);
+      transform: rotate(-45deg)
+    }
+
+    .butir:before {
+      position: absolute;
+      top: -50%;
+      left: 0;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: 100%;
+    }
+
+    .butir:after {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: 100%;
+    }
+
+    @-webkit-keyframes love {
+      0%{top:110%}
+    }
+    @-moz-keyframes love {
+      0%{top:110%}
+    }
+    @-ms-keyframes love {
+      0%{top:110%}
+    }
+    @keyframes love {
+      0%{top:110%}
+    }
+
+
+
+    #loadingDiv{
+      background: black;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999999;
+      text-align: center;
+    }
+    #loadingDiv .loader{
+      margin: 250px auto;
+    }
+
+    .fade-scale {
+      transform: scale(0);
+      opacity: 0;
+      -webkit-transition: all .25s linear;
+      -o-transition: all .25s linear;
+      transition: all .25s linear;
+    }
+
+    .fade-scale.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+
+
+
+
+
+  <div class="depan d-flex flex-column  justify-content-center align-items-center">
+    <div class="title">
+
+      <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold klik-saya" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        HALO, KLIK AKU DONG!
+      </button>
+
+
+      <div class="modal fade-scale" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <h1 class="fw-bold">Aku punya tebak-tebakan<br>nih buat kamu :)</h1>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal2">Ya, Apa tu?</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade-scale" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Kamu tau gak bedanya <br>KAMU sama CINCIN? :)</h1>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-red-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modalx">GAK MAU TAU!</button>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal3">ENGGA, EMANG APA?</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade-scale" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">CINCIN MEREKAT DI JARI, <br>KAMU MEREKAT DI HATI AKU :)</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-red-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal5">NOT BAD!</button>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal5">MAKASIH</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade-scale" id="modalx" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Yaahhh .. <br>Maaf deh :(</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal5">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade-scale" id="modal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Aku punya pertanyaan buat kamu ..</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal6">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade-scale" id="modal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Tapi jawab dengan jujur ya!</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal7">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade-scale" id="modal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Awas Kalo Boong! :(</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal8">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade-scale" id="modal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Isi nama kamu dulu dong :)</h1>
+              <input type="text" class="form-control py-3 px-4 fs-1 nama bg-pink-200 border-0" name="">
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold btn-nama">OKE</button>
+                <!-- <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold btn-nama" data-bs-toggle="modal" data-bs-target="#modal8">IYA</button> -->
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade-scale" id="modal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold"><span class="nama_kamu"></span> Sayang Gak Sama <span class="nama_saya"></span> ?</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-red-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal11">GAK</button>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal10">SAYANG</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade-scale" id="modal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold"><span class="nama_saya"></span> Juga Sayang Banget Sama <span class="nama_kamu"></span></h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal13">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade-scale" id="modal13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Emang seberapa sayang sih sama <span class="nama_saya"></span> ?</h1>
+              <br>
+              <input type="range" min="0" max="100" class="range">
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold btn-range">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade-scale" id="modal14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Makasih ya sayang udah sayang sama <span class="nama_saya"></span> sebesar <span class="persen"></span>%</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal15">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade-scale" id="modal15" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Terakhir deh sayang ..</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal16">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade-scale" id="modal16" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Coba klik icon <i class="fa fa-heart text-danger"></i> di paling bawah</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-dismiss="modal">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade-scale" id="modal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Yakin gak sayang sama <span class="nama_saya"></span> ?</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-toggle="modal" data-bs-target="#modal12">IYA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade-scale" id="modal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body py-5 px-5 text-center">
+              <br>
+              <h1 class="fw-bold">Yaudah deh, aku akan pergi :(</h1>
+              <br>
+            </div>
+            <div class="p-5 text-center">
+              <center>
+                <button type="button" class="btn bg-green-600 rounded-pill px-4 py-3 text-white fw-bold" data-bs-dismiss="modal">PERGI AJA</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <input type="hidden" value="" class="tempat-nama">
+      <input type="hidden" value="" class="tempat-range">
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <footer class="page-footer font-small blue fixed-bottom font-mono">
+
+    <div class="footer-copyright text-center py-3 fw-bold"><small> Dibuat Dengan
+      <i class="fa fa-heart text-danger fa-beat hati hatiku"></i> Oleh
+      <a target="_blank" class="text-decoration-none fw-bold" id="credit"></a></small>
+    </div>
+
+  </footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script>
+
+    $('body').append('<div style="" id="loadingDiv"><div class="text-light loader">Sabar ya, lagi loading :) ..</div></div>');
+    $(window).on('load', function(){
+      setTimeout(removeLoader, 2000);
+    });
+
+    function removeLoader(){
+      $( "#loadingDiv" ).fadeOut(500, function() {
+        $( "#loadingDiv" ).remove();
+      });  
+    }
+
+    $(document).ready(function(){
+
+
+     $("body").on("click",".klik-saya", function(){
+      $(".nama").val('');
+      $(".range").val('');
+    });
+
+     $("body").on("click",".btn-nama", function(){
+      var x = $(".nama").val();
+      if(x.length == 0){
+        $(".nama").after("<h3 class='text-danger'>Isi dulu dong beb!</h3>");
+        return false;
+      }else{
+        $(".tempat_nama").val(x);
+        $("#modal8").modal('hide');
+        $("#modal9").modal('show');
+
+        $(".nama_kamu").html(x);
+        $(".nama_saya").html(sender);
+      }
+    });
+
+
+     $("body").on("click",".btn-range", function(){
+      var x = $(".range").val();
+      if(x.length == 0){
+        $(".range").after("<h3 class='text-danger'>Isi dulu dong beb!</h3>");
+        return false;
+      }else{
+        $(".tempat-range").val(x);
+
+        $("#modal13").modal('hide');
+        $("#modal14").modal('show');
+
+        $(".persen").html(x);
+      }
+    });
+
+
+
+
+     $('.modal').modal({backdrop: 'static', keyboard: false});
+
+     let nama, val;
+     const url_string = document.URL;
+     const url = new URL(url_string);
+     let sender;
+
+     if (url.searchParams.get('by') != null) {
+      sender = url.searchParams.get('by');
+    } else {
+      sender = "Joni";
+    }
+
+    let footer = document.getElementById("credit");
+    footer.innerHTML = sender;
+    footer.href = "#";
+
+
+    $("body").on("click",".hatiku", function(){
+
+      $(".klik-saya").after("<center><h1 class='text-pink-800 fw-bold'>AKU SAYANG KAMU<br>To The Moon and Back :)</h1></center>");
+      $(".klik-saya").remove("");
+
+      var love = setInterval(function() {
+        var r_num = Math.floor(Math.random() * 40) + 1;
+        var r_size = Math.floor(Math.random() * 65) + 10;
+        var r_left = Math.floor(Math.random() * 100) + 1;
+        var r_bg = Math.floor(Math.random() * 25) + 100;
+        var r_time = Math.floor(Math.random() * 5) + 5;
+
+
+        $('.bg-hati').append("<div class='butir' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
+
+        $('.bg-hati').append("<div class='butir' style='width:" + (r_size - 10) + "px;height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) + ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) + "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) + "s ease'></div>");
+
+        $('.heart').each(function() {
+          var top = $(this).css("top").replace(/[^-\d\.]/g, '');
+          var width = $(this).css("width").replace(/[^-\d\.]/g, '');
+          if (top <= -100 || width >= 150) {
+            $(this).detach();
+          }
+        });
+      }, 500);
+
+    });
+
+
+
+
+  });
+
+
+</script>
+
+</body>
+</html>
